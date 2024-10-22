@@ -1,0 +1,3 @@
+app>controllers
+app>views>(app_name)
+app>assets>javascripts
