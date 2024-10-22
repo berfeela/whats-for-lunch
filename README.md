@@ -2,8 +2,6 @@
 
 This simple program will help you figure out what to make and/or eat.
 
-Things you may want to cover:
-
 * Ruby version 3.3.5
 * Rails version 7.2.1.1
 
