@@ -12,6 +12,8 @@ module Recipe
     config.load_defaults 7.2
     config.api_only = true
     config.active_record.schema_format = :sql
+    config.active_record.migration_error = :ignore
+    config.active_record.database_selector = nil
 
     config.generators do |g|
       g.orm :none
