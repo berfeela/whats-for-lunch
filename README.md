@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This simple program will help you figure out what to make and/or eat.
 
-Things you may want to cover:
+* Ruby version 3.3.5
+* Rails version 7.2.1.1
 
-* Ruby version
+* Configuration: Configure the static array of dishes in recipes_controller.rb in app>controllers> with all the dishes you love.
+  Can adjust html/css basis preference in index.html.erb in app>views>recipes>.
 
-* System dependencies
+* Database: None
 
-* Configuration
+* Services: No high-level architecture reqd.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment instructions: Deploy & host on local by giving your user 'full access' permission, using the rails server.
