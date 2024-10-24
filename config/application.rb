@@ -11,11 +11,13 @@ module Recipe
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
     config.api_only = true
-    config.active_record.schema_format = :sql
-    config.active_record.migration_error = :ignore
-    config.active_record.database_selector = nil
+    config.active_record.migration_error = false
+    config.active_record.dump_schema_after_migration = false
+    config.active_record.schema_format = :ruby
+    config.active_record.maintain_test_schema = false
+    
 
-    config.generators.orm = :none
+    config.generators.orm = :nones
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
