@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaj Kya Banega?</title>
+
+  <%= javascript_importmap_tags %> <!-- Optional: Only if you need Importmaps -->
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(160deg, #ffcc99, #b3ffcc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #000033;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #3498db;
+      border: none;
+      border-radius: 0px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.9);
+    }
+
+    p {
+      margin-top: 4rem;
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 24px 20px;
+      border-radius: 0px;
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Aaj Kya Banega?</h1>
+  <button id="find-out">Find Out</button>
+  <p id="recipe">Jaanne ke liye button dabaayein</p>
+
+  <script>
+    document.getElementById('find-out').addEventListener('click', function () {
+      fetch('/random_recipe', {
+        headers: { 'X-Requested-With': 'XMLHttpRequest' } // Ensures Turbo doesn't interfere
+      })
+        .then(response => response.text())
+        .then(recipe => {
+          console.log('Fetched Recipe:', recipe); // Debugging line
+          document.getElementById('recipe').innerText = recipe;
+        })
+        .catch(error => console.error('Error fetching recipe:', error)); // Handle any errors
+    });
+  </script>
+</body>
+
+</html>
