@@ -1,24 +1,8 @@
-# README
+Tying out RoR in 2024. v7.2.2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get a random dish to make and eat for when you're confused about what you should have.
 
-Things you may want to cover:
+Go to ...app/controllers/recipes_controller.rb and replace with your favourite dishes.
+Upon clicking 'Find Out' the app will randomly return a dish from your list.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It won't repeat the last three results you got.
